@@ -1,4 +1,5 @@
 import 'package:expensetracker/constants/constant.dart';
+import 'package:expensetracker/widgets/catitemwidget.dart';
 import 'package:flutter/material.dart';
 
 class Settings extends StatelessWidget {
@@ -28,6 +29,11 @@ class Settings extends StatelessWidget {
             shape: BoxShape.circle,
           ),
         ),
+        Categorywidget(
+            categorytem: "User name",
+            categorytemexp: 2302,
+            categorytemcolor: kDrinks,
+            categorytemicon: Icons.perm_contact_calendar),
       ],
     );
   }
