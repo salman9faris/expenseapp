@@ -10,6 +10,13 @@ class TransactionScreen extends StatelessWidget {
     return ListView(
       physics: ClampingScrollPhysics(),
       children: [
+        Container(
+          margin: EdgeInsets.all(8),
+          child: Text(
+            "Transactions",
+            style: kWelcometext,
+          ),
+        ),
         Categorywidget(
             categorytem: "Drinks & food",
             categorytemexp: 2302,

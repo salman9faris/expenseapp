@@ -20,11 +20,12 @@ class Categorywidget extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(8),
         width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height * .10,
+        height: MediaQuery.of(context).size.height * .07,
         decoration: BoxDecoration(
-            color: kCatcardbg,
-            borderRadius: BorderRadius.circular(10),
-            border: Border.all(color: kCatcardboarder)),
+          color: kCatcardbg,
+          borderRadius: BorderRadius.circular(10),
+          // border: Border.all(color: kCatcardboarder)
+        ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -34,8 +35,8 @@ class Categorywidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  height: 50,
-                  width: 50,
+                  height: 30,
+                  width: 30,
                   decoration: BoxDecoration(
                     color: categorytemcolor,
                     borderRadius: BorderRadius.circular(8),
@@ -43,7 +44,7 @@ class Categorywidget extends StatelessWidget {
                   child: Icon(
                     categorytemicon,
                     color: kCaticonclr,
-                    size: 30,
+                    size: 20,
                   ),
                 ),
                 const SizedBox(

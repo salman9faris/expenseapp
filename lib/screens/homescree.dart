@@ -1,5 +1,6 @@
 import 'package:expensetracker/constants/constant.dart';
 import 'package:expensetracker/screens/analysis.dart';
+import 'package:expensetracker/screens/dataentryscreen.dart';
 import 'package:expensetracker/screens/home.dart';
 import 'package:expensetracker/screens/settings.dart';
 import 'package:expensetracker/screens/transactionscreen.dart';
@@ -12,7 +13,9 @@ import 'package:expensetracker/provider/bottomnavprovider.dart';
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
 
-  List<dynamic> screens = [
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  List<dynamic> _screens = [
     HomePage(),
     TransactionScreen(),
     Analysis(),
@@ -22,8 +25,9 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer<bottomNavProvider>(
-        builder: (context, bottomnavindex, child) {
+        builder: (context, _bottomnavindex, child) {
       return Scaffold(
+        key: scaffoldKey,
         backgroundColor: Color.fromARGB(255, 255, 255, 255),
         appBar: AppBar(
           actions: const [
@@ -37,18 +41,25 @@ class HomeScreen extends StatelessWidget {
             ),
           ],
         ),
-        body: screens[bottomnavindex.currentindex],
+        body: _screens[_bottomnavindex.currentindex],
         bottomNavigationBar: Bottomnavwidget(
-          bottomnavindex: bottomnavindex,
+          bottomnavindex: _bottomnavindex,
         ),
-        floatingActionButton: FloatingActionButton(
-          backgroundColor: kFloaticon,
-          child: const Icon(
-            Icons.add,
-            color: Colors.white,
-          ),
-          onPressed: () {},
-        ),
+        floatingActionButton: _bottomnavindex.currentindex == 0
+            ? FloatingActionButton(
+                backgroundColor: kFloaticon,
+                child: const Icon(
+                  Icons.add,
+                  color: Colors.white,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => DataInput()),
+                  );
+                },
+              )
+            : null,
       );
     });
   }

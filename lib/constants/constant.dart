@@ -21,11 +21,11 @@ const kCardiconexp = Color.fromARGB(255, 233, 8, 8);
 const kCardiconinc = Color.fromARGB(255, 6, 168, 14);
 
 //category item color
-const kCatcardbg = Color.fromARGB(226, 255, 255, 255);
+const kCatcardbg = Color.fromARGB(223, 255, 255, 255);
 const kCatcardboarder = kFloaticon;
 const kDrinks = Color.fromARGB(230, 33, 84, 215);
 const kEntertainment = Color.fromARGB(224, 133, 33, 215);
-const kmiscellaneous = Color.fromARGB(230, 215, 151, 33);
+const kmiscellaneous = Color.fromARGB(230, 215, 139, 33);
 const kTransportation = Color.fromARGB(214, 215, 33, 66);
 const kBill = Color.fromARGB(252, 33, 163, 215);
 const kCaticonclr = Colors.white;
@@ -38,7 +38,7 @@ const kbalCardheading = TextStyle(
     fontWeight: FontWeight.w300);
 const kbalCardsubheading = TextStyle(
     color: Colors.white,
-    fontSize: 18,
+    fontSize: 16,
     fontFamily: "Roboto",
     fontWeight: FontWeight.w500);
 
@@ -58,7 +58,7 @@ const kCardHeading = TextStyle(
     fontWeight: FontWeight.w500);
 const kCardsubheading = TextStyle(
     color: Color.fromARGB(255, 3, 3, 3),
-    fontSize: 18,
+    fontSize: 16,
     fontFamily: "Roboto",
     fontWeight: FontWeight.w600);
 
@@ -71,7 +71,26 @@ const kInterimheading = TextStyle(
 //category textstyles
 
 const kCatCardtitle =
-    TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.w400);
+    TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.normal);
 
 const kCatcardamount =
-    TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.w500);
+    TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.normal);
+
+//settings screen
+
+const kTilecolor = Color.fromARGB(255, 253, 253, 253);
+const kTileiconbg = Color.fromARGB(135, 255, 197, 7);
+const kTileiconclr = Color.fromARGB(255, 86, 84, 84);
+
+//settings tile textstyle
+const KTiletitle = TextStyle(
+  fontSize: 16,
+  color: Color.fromARGB(255, 0, 0, 0),
+  fontWeight: FontWeight.normal,
+);
+
+const kTilevalue = TextStyle(
+  fontSize: 14,
+  color: Color.fromARGB(255, 0, 0, 0),
+  fontWeight: FontWeight.normal,
+);

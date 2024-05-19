@@ -6,11 +6,18 @@ class Analysis extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        margin: EdgeInsets.all(8),
-        child: Text(
-          "Wallet",
-          style: kWelcometext,
-        ));
+    return Column(
+      children: [
+        Container(
+            margin: EdgeInsets.all(8),
+            child: Text(
+              "Wallet",
+              style: kWelcometext,
+            )),
+        ListTile(
+          title: Text("reds"),
+        ),
+      ],
+    );
   }
 }

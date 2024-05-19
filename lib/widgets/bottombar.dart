@@ -1,5 +1,6 @@
 import 'package:expensetracker/provider/bottomnavprovider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:provider/provider.dart';
@@ -31,30 +32,32 @@ class Bottomnavwidget extends StatelessWidget {
               color: const Color.fromARGB(255, 113, 113, 113), width: .1),
           activeColor: kBottomseltextcolor,
           tabBackgroundColor: kBottomnavbg,
-          gap: 2,
+          gap: 8,
           textSize: 25,
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 18),
+          padding: EdgeInsets.symmetric(
+              horizontal: MediaQuery.of(context).size.width * .06,
+              vertical: 15),
           tabs: const [
             GButton(
               icon: Icons.house_outlined,
               borderRadius: BorderRadius.all(Radius.circular(15)),
-              text: " Home",
+              //text: " home",
             ),
             GButton(
               icon: Icons.compare_arrows_outlined,
               textSize: 10.0,
               borderRadius: BorderRadius.all(Radius.circular(15)),
-              text: " History",
+              //text: " History",
             ),
             GButton(
               icon: Icons.wallet_outlined,
               borderRadius: BorderRadius.all(Radius.circular(15)),
-              text: " Wallet",
+              //text: " Wallet",
             ),
             GButton(
               icon: Icons.settings_sharp,
               borderRadius: BorderRadius.all(Radius.circular(15)),
-              text: " Settings",
+              //text: " Settings",
             ),
           ],
           selectedIndex: _selectedindex,
